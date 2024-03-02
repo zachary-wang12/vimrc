@@ -13,19 +13,14 @@
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Configuration File Settings
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Configuration File Settings {{{
-" setup folds {{{
 augroup filetype_vim
     autocmd!
     autocmd FileType vim setlocal foldmethod=marker
 augroup END
-" }}}
-" }}}
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Global Settings
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Global Settings {{{
 " Disable compatible mode with VI
 set nocompatible
 " Disable warning when hidden unsaved buffer
@@ -42,12 +37,10 @@ set splitright splitbelow
 set nowrap
 " Enable pare <>
 set matchpairs+=<:>
-" }}}
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Indent Settings
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Indent Settings {{{
 " Enable smart indent
 set smartindent
 " Enable auto indent
@@ -60,12 +53,10 @@ set softtabstop=4
 set shiftwidth=4
 " >> Indents to next multiple of shiftwidth
 set shiftround
-" }}}
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Display Settings
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Display Settings {{{
 " Display line number
 set number
 " Display relative line number
@@ -114,12 +105,9 @@ endif
 " Use industry color scheme
 colorscheme industry
 
-" }}}
-
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Search Settings
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Search Settings {{{
 " Enable increased search
 set incsearch
 " Highlight search result
@@ -128,40 +116,23 @@ set hlsearch
 set ignorecase
 " Enable smart case sensitive
 set smartcase
-" }}}
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Cache Settings
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Cache Settings {{{
 " Disable backup
 set nobackup
 " Do NOT create swap file
 set noswapfile
 " Auto read when file changed by external
 set autoread
-" }}}
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Key Bindings
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Key Bindings {{{
 " Set <space> as mapleader
 let mapleader = "\<space>"
 " Map jk in INSERT MODE as <ESC> 
 inoremap jk <esc>
 " Map <leader><leader> to switch highligh search
 nnoremap <silent> <leader><leader> :noh<return><esc>
-" }}}
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Import Resource Import
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Import Resource Import {{{
-if len(globpath(&rtp, '*.vimrc', 0, 1, 1))
-    let s:configPathList = globpath(&rtp, '*.vimrc', 0, 1, 1) 
-    for $CONFIGPATH in s:configPathList
-        source $CONFIGPATH
-    endfor
-endif
-" }}}
