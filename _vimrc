@@ -63,6 +63,9 @@ set number
 syntax on
 " Always show ruler
 set ruler
+" Always show column color
+set colorcolumn=80
+highlight ColorColumn ctermbg=darkgrey guibg=#2e2e2e
 " Always show status line
 set laststatus=2
 " Always show current mode
